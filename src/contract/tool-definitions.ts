@@ -14,7 +14,7 @@ import {
   waitUntilActingOutputSchema,
 } from "./schemas";
 
-export const WEBMCP_ADAPTER_VERSION = "0.1.0";
+export const WEBMCP_ADAPTER_VERSION = "0.1.1";
 export const WEBMCP_PLAY_CONTRACT_VERSION = "10";
 export const WEB_MCP_GAMEPLAY_TOOL_NAMES = [
   "observe",
@@ -142,7 +142,7 @@ export const WEB_MCP_TOOL_DEFINITIONS: readonly WebMcpPageToolDefinition[] = [
   tool(
     "close_match",
     "Close Match",
-    "Dispose this page's match session. Closing an already-closed session still succeeds.",
+    "Dispose one session. Closing an already-closed session still succeeds.",
     false,
     false,
   ),

@@ -3,6 +3,7 @@ export const AGENT_PLAY_ERROR_CODES = [
   "credential-stale",
   "invalid-arguments",
   "invitation-expired",
+  "invitation-already-redeemed",
   "invitation-invalid",
   "invitation-missing",
   "invitation-unavailable",
@@ -12,9 +13,11 @@ export const AGENT_PLAY_ERROR_CODES = [
   "no-active-session",
   "offline",
   "server-refused",
+  "settlement-timeout",
   "session-already-active",
   "webmcp-disabled",
   "webmcp-unavailable",
+  "waiting-for-host-approval",
 ] as const;
 
 export type AgentPlayErrorCode = (typeof AGENT_PLAY_ERROR_CODES)[number];
