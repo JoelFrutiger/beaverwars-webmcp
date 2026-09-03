@@ -1,0 +1,48 @@
+{
+  "name": "@beaverwars/webmcp",
+  "version": "0.1.0",
+  "description": "Production page-bound WebMCP runtime for Beaver Wars",
+  "license": "Apache-2.0",
+  "private": false,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./agent-console.css": "./src/page/agent-console.css"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE",
+    "SECURITY.md"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm run test && npm run check:schemas && npm run check:browser-graph && npm run check:public-surface && npm run build && npm run test:e2e",
+    "check:browser-graph": "node scripts/check-browser-graph.mjs",
+    "check:public-surface": "node scripts/check-public-surface.mjs",
+    "check:schemas": "node scripts/check-schemas.mjs",
+    "dev": "vite --host 127.0.0.1",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "lint": "eslint . --max-warnings=0",
+    "test": "vitest run",
+    "test:e2e": "node scripts/run-e2e.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "ajv": "^8.20.0",
+    "eslint": "^10.9.1",
+    "jsdom": "^30.0.1",
+    "playwright": "^1.62.1",
+    "prettier": "^3.9.6",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.68.0",
+    "vite": "^8.2.2",
+    "vitest": "^4.1.11",
+    "webmcp-types": "^0.1.5"
+  }
+}
