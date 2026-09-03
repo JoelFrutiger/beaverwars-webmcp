@@ -97,7 +97,10 @@ export async function mountAgentPage(options: {
     return { dispose };
   }
 
-  const diagnostics = new WebMcpDiagnosticsController(true);
+  const diagnostics = new WebMcpDiagnosticsController(
+    true,
+    options.host.diagnostics?.sourceRevision,
+  );
   try {
     await registerPlayWebMcpTools({
       beforeExecution: async (signal) => {

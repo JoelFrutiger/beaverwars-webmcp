@@ -15,3 +15,5 @@ The host must scrub any credential-bearing URL fragment synchronously before its
 The embedding document must provide the browser's real `document.modelContext`, be origin-isolated, allow the same-origin `tools` Permissions Policy, and dispose the returned controller when its page lifecycle ends. Do not ship the test `FakeModelContext` in production.
 
 The runtime gate is host supplied. `WebMcpReleaseGate` implements the shared polling and fail-closed algorithm; its `load` callback should fetch application-owned same-origin configuration.
+
+An embedding application may provide a short reviewed source revision through `host.diagnostics.sourceRevision`. It is included in the redacted local diagnostic snapshot without exposing transport state.

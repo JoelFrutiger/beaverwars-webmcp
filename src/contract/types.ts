@@ -61,6 +61,7 @@ export interface AgentRuntimeGate {
 }
 
 export interface AgentPageHost {
+  diagnostics?: { sourceRevision?: string };
   forgetSavedTarget?(): Promise<void>;
   launch: AgentLaunchDescriptor;
   launchMessage?: string;

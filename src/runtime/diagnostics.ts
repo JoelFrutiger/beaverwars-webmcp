@@ -15,7 +15,10 @@ export class WebMcpDiagnosticsController {
   private readonly completedTurnToolCalls: number[] = [];
   private readonly events: SafeDiagnosticEvent[] = [];
 
-  constructor(private readonly browserApiAvailable: boolean) {}
+  constructor(
+    private readonly browserApiAvailable: boolean,
+    private readonly sourceRevision?: string,
+  ) {}
 
   record(event: WebMcpExecutionEvent): void {
     const { completedTurn, retryable, ...safeEvent } = event;
@@ -37,6 +40,7 @@ export class WebMcpDiagnosticsController {
       completedTurnToolCalls: [...this.completedTurnToolCalls],
       contractVersion: WEBMCP_PLAY_CONTRACT_VERSION,
       events: this.events.map((event) => ({ ...event })),
+      ...(this.sourceRevision ? { sourceRevision: this.sourceRevision } : {}),
     };
   }
 }

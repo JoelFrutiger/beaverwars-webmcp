@@ -3,6 +3,7 @@ import { describe, expect, it, vi } from "vitest";
 import { WEB_MCP_TOOL_DEFINITIONS } from "../contract/tool-definitions";
 import { MockAgentPlayService } from "../mock/mock-play-service";
 import { FakeModelContext } from "../testing/fake-model-context";
+import { WebMcpDiagnosticsController } from "./diagnostics";
 import { PageBoundPlaySession } from "./page-bound-session";
 import {
   getPlayWebMcpToolSchemas,
@@ -170,5 +171,15 @@ describe("public WebMCP runtime", () => {
         name: "AgentPlayError",
       }),
     );
+  });
+
+  it("reports only the host-provided public source revision", () => {
+    expect(
+      new WebMcpDiagnosticsController(true, "4661631").snapshot(),
+    ).toMatchObject({
+      adapterVersion: "0.1.2",
+      contractVersion: "10",
+      sourceRevision: "4661631",
+    });
   });
 });
