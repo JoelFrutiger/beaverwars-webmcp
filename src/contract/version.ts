@@ -1,0 +1,2 @@
+export const PLAY_MCP_SCHEMA_VERSION = 10;
+export const PLAY_MCP_CONTRACT_VERSION = "10";

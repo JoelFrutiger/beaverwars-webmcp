@@ -5,9 +5,8 @@ export default defineConfig({
   server: {
     headers: {
       "Origin-Agent-Cluster": "?1",
-      "Permissions-Policy": "tools=(self)"
-    }
+      "Permissions-Policy": "tools=(self)",
+    },
   },
-  test: { environment: "node", restoreMocks: true, unstubGlobals: true }
+  test: { environment: "node", restoreMocks: true, unstubGlobals: true },
 });
-

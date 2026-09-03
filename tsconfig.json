@@ -9,6 +9,10 @@
     "skipLibCheck": true,
     "types": ["webmcp-types"]
   },
-  "include": ["src/**/*.ts", "demo/**/*.ts", "vite.config.ts", "vitest.config.ts"]
+  "include": [
+    "src/**/*.ts",
+    "demo/**/*.ts",
+    "vite.config.ts",
+    "vitest.config.ts"
+  ]
 }
-

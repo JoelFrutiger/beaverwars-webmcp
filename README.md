@@ -22,4 +22,3 @@ Please report vulnerabilities according to [SECURITY.md](SECURITY.md). Never inc
 ## License
 
 Apache-2.0. See [LICENSE](LICENSE).
-

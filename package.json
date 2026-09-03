@@ -17,6 +17,7 @@
   ],
   "scripts": {
     "build": "vite build",
+    "capture:screenshots": "node scripts/capture-screenshots.mjs",
     "check": "npm run format:check && npm run lint && npm run typecheck && npm run test && npm run check:schemas && npm run check:browser-graph && npm run check:public-surface && npm run build && npm run test:e2e",
     "check:browser-graph": "node scripts/check-browser-graph.mjs",
     "check:public-surface": "node scripts/check-public-surface.mjs",
