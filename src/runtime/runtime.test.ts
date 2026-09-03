@@ -177,7 +177,7 @@ describe("public WebMCP runtime", () => {
     expect(
       new WebMcpDiagnosticsController(true, "4661631").snapshot(),
     ).toMatchObject({
-      adapterVersion: "0.1.2",
+      adapterVersion: "0.1.3",
       contractVersion: "10",
       sourceRevision: "4661631",
     });

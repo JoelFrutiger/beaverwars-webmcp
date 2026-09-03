@@ -1,6 +1,6 @@
 {
   "name": "@beaverwars/webmcp",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Production page-bound WebMCP runtime for Beaver Wars",
   "license": "Apache-2.0",
   "private": false,
